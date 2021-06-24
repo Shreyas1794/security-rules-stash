@@ -1,0 +1,16 @@
+apiVersion: security.accuknox.com/v1
+kind: KubeArmorPolicy
+metadata:
+  name: mitre-tactic-credential-access
+spec:
+  selectorLabels:
+      nodeSelector:
+          hostname: xyz
+  process: 
+        matchPaths: 
+        - path: /usr/bin/chown
+        matchPaths: 
+        - path: /usr/bin/chmod          
+  action:
+    Audit
+  severity: 3
