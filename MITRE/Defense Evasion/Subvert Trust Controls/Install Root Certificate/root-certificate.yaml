@@ -1,11 +1,11 @@
 apiVersion: security.accuknox.com/v1
 kind: KubeArmorPolicy
 metadata:
-  name: mitre-tactic-credential-access
+  name: mitre-tactic-defense-evasion
 spec:
-  selectorLabels:
-      nodeSelector:
-          hostname: xyz
+  selector:
+      matchLables:
+          hostname: 
   process: 
         matchPaths: 
         - path: /bin/cat
@@ -19,4 +19,4 @@ spec:
             recurisve: true        
   action:
     Audit
-  severity: 5
+  severity: 3
