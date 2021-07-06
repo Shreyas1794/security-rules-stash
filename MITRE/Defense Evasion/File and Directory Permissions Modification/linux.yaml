@@ -1,7 +1,7 @@
 apiVersion: security.accuknox.com/v1
 kind: KubeArmorPolicy
 metadata:
-  name: mitre-tactic-credential-access
+  name: mitre-tactic-defense-evasion
 spec:
   selector:
       matchLabels:
