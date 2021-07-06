@@ -3,9 +3,9 @@ kind: KubeArmorPolicy
 metadata:
   name: mitre-tactic-credential-access
 spec:
-  selectorLabels:
-      nodeSelector:
-          hostname: xyz
+  selector:
+      matchLabels:
+          container: ubuntu-1
   process: 
         matchPaths: 
         - path: /bin/grep
